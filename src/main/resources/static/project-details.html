@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details | Student Showcase</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Poppins:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body class="details-page" style="background-color: #08090d;">
+    <!-- Glowing Background blobs -->
+    <div class="glow-bg-1" style="opacity: 0.12;"></div>
+    <div class="glow-bg-2" style="opacity: 0.12;"></div>
+
+    <header class="portfolio-header">
+        <div class="logo">
+            <a href="index.html" style="text-decoration: none; color: inherit;">
+                <span class="logo-bracket">&lt;</span><span id="logo-name">Portfolio</span><span class="logo-bracket"> /&gt;</span>
+            </a>
+        </div>
+        <a href="index.html#projects" class="btn btn-secondary" style="padding: 8px 18px; font-size: 12px; border-radius: 20px;">
+            &larr; Back to Projects
+        </a>
+    </header>
+
+    <main class="portfolio-main scroll-section" style="padding-top: 130px; max-width: 1400px; width: 92%; margin: 0 auto;">
+        <div id="details-loader" class="loading-spinner">Loading project details...</div>
+        
+        <div id="details-container" class="hidden">
+            <div class="details-grid-layout">
+                <!-- Left Panel: Title, Tech Stack, Problem, Impact, Action Buttons -->
+                <div class="details-left-panel">
+                    <div class="details-project-header" style="margin-bottom: 25px;">
+                        <h1 id="details-title" class="name" style="font-size: 2.8rem; margin-bottom: 12px; line-height: 1.2;">Project Name</h1>
+                        <div id="details-tech-stack" class="project-tech" style="justify-content: flex-start; margin-bottom: 0;"></div>
+                    </div>
+
+                    <!-- Problem Block -->
+                    <div id="details-problem-block" class="project-modal-block problem" style="margin-bottom: 25px;">
+                        <h4>
+                            <svg viewBox="0 0 24 24" width="14" height="14" style="fill: currentColor; vertical-align: middle; margin-right: 6px;"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                            Problem Statement
+                        </h4>
+                        <p id="details-problem" style="margin-top: 6px;"></p>
+                    </div>
+
+                    <!-- Impact Block -->
+                    <div id="details-impact-block" class="project-modal-block impact" style="margin-bottom: 25px;">
+                        <h4>
+                            <svg viewBox="0 0 24 24" width="14" height="14" style="fill: currentColor; vertical-align: middle; margin-right: 6px;"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+                            Project Impact
+                        </h4>
+                        <p id="details-impact" class="highlight" style="margin-top: 6px;"></p>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div id="details-links" class="project-links" style="margin-top: 15px; border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 25px; gap: 15px; flex-direction: column;">
+                        <!-- Links will be injected here -->
+                    </div>
+                </div>
+
+                <!-- Right Panel: Description, Key Features, ER Diagram -->
+                <div class="details-right-panel">
+                    <!-- Description Card -->
+                    <div class="timeline-card" style="margin-bottom: 25px; padding: 30px;">
+                        <h4 style="color: var(--text-primary); font-family: 'Orbitron', sans-serif; font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 12px; border-left: 3px solid #ff007f; padding-left: 10px;">Project Description</h4>
+                        <p id="details-desc" style="font-size: 15px; line-height: 1.8; color: var(--text-secondary);"></p>
+                    </div>
+
+                    <!-- Key Features -->
+                    <div id="details-features-block" class="project-modal-block feature" style="margin-bottom: 25px; padding: 30px;">
+                        <h4>
+                            <svg viewBox="0 0 24 24" width="14" height="14" style="fill: currentColor; vertical-align: middle; margin-right: 6px;"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                            Key Features
+                        </h4>
+                        <p id="details-features" style="margin-top: 8px;"></p>
+                    </div>
+
+                    <!-- ER Diagram -->
+                    <div id="details-er-block" class="project-modal-block er-diagram" style="padding: 30px;">
+                        <h4>
+                            <svg viewBox="0 0 24 24" width="14" height="14" style="fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; vertical-align: middle; margin-right: 6px;"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                            Entity-Relationship (ER) Diagram
+                        </h4>
+                        <div class="er-diagram-img-wrapper" style="margin-top: 20px;">
+                            <img id="details-er-img" src="" alt="ER Diagram" style="max-height: 600px; width: 100%; object-fit: contain;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="portfolio-footer" style="margin-top: 60px;">
+            <p>&copy; <span id="footer-year">2026</span> Portfolio. All rights reserved.</p>
+        </footer>
+
+    <script src="project-details.js"></script>
+</body>
+</html>
